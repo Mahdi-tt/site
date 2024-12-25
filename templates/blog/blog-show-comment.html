@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> show comments </title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000000;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .comments {
+            background: #fff;
+            border-radius: 5px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #333;
+            font-size: 18px;
+        }
+
+        .comment {
+            background: #f9f9f9;
+            border: 1px solid #000000;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        .comment p {
+            margin: 0;
+            
+        }
+        .cotent    {
+            color:  #000000;
+            
+        }
+        .comment strong {
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+    <div class="comments">
+        <h2> comments </h2>
+        {% for c in comment %}
+        <div class="comment">
+            <p><strong> {{c.name}} </strong> </p>
+            <p class="cotent">{{c.message}}</p>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
